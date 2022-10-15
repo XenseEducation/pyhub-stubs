@@ -2,8 +2,8 @@ from typing import Tuple, overload
 from hub import port, battery, bluetooth, button, display, motion, sound, supervision
 from hub.display import Image
 
-__version__  = 'v1.0.0.0000-0000000'
-config  = {}
+__version__: str = ...
+config: dict = ...
 
 TOP = 0
 FRONT = 1
@@ -44,7 +44,8 @@ def led(red: int, green: int, blue: int):
 def led(color: Tuple[int, int, int]):
     pass
 
-def file_transfer(filename: str, filesize: int, packetsize=1000, timeout=2000, mode=None):
+def file_transfer(filename: str, filesize: int, packetsize: int = 1000,
+                  timeout: int = 2000, mode=None):
     pass
 
 
